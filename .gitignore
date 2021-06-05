@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Vim, undo file
-/.un~
+.un~
 .py~
