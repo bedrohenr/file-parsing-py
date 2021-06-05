@@ -1,6 +1,7 @@
 import os
 
-path = input('Insira o caminho do arquivo: ')
+path = input('Insert path to file: ')
+search_string = input('Insert text to search: ')
 
 file_status = os.path.isfile(path)
 
@@ -12,7 +13,7 @@ if(file_status):
     with open(path) as f:
         contents = f.readlines()
         for line in contents:
-            if '->' in line:
+            if search_string in line:
                 important = contents
 
     f.close()
@@ -25,8 +26,8 @@ if(file_status):
             # Splitting values for another array loop
         splitted = content.split()
         for index in splitted:
-                # searching for arrows in array string
-            search = index.find('->')
+                # searching in array string
+            search = index.find(search_string)
                 # >= because it returns position of, -1 for "false"
             if (search >= 0):
                 output = index
