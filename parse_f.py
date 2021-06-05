@@ -18,20 +18,21 @@ if(file_status):
 
     f.close()
 
-    count = 0
-    output = []
-        # Going through file contents
-    for content in important:
-        count += 1
-            # Splitting values for another array loop
-        splitted = content.split()
-        for index in splitted:
-                # searching in array string
-            search = index.find(search_string)
-                # >= because it returns position of, -1 for "false"
-            if (search >= 0):
-                output = index
-                print(f'{count}: {output}')
+    output = [] 
+    if(important):
+        count = 0
+            # Going through file contents
+        for content in important:
+            count += 1
+                # Splitting values for another array loop
+            splitted = content.split()
+            for index in splitted:
+                    # searching in array string
+                search = index.find(search_string)
+                    # >= because it returns position of, -1 for "false"
+                if (search >= 0):
+                    output = index
+                    print(f'{count}: {output}')
         
         # Empty output
     if not output:
