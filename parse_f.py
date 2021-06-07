@@ -1,5 +1,10 @@
 import os
 
+    # colors
+yellow = '\033[93m'
+cyan =  '\033[96m'
+white = '\033[00m'
+
 path = input('Insert path to file: ')
 search_string = input('Insert text to search: ')
 
@@ -32,10 +37,10 @@ if(file_status):
                     # >= because it returns position of, -1 for "false"
                 if (search >= 0):
                     output = index
-                    print(f'{count}: {output}')
+                    print(f'{yellow}{count}: {cyan}{output}{white}')
         
         # Empty output
     if not output:
-        print('Nothing to show from file.')
+        print(cyan + 'Nothing to show from file.' + white)
 else:
-    print(f'File not found.\nCheck the inserted path: {path}')
+    print(f'{yellow}File not found.\nCheck the inserted path: {cyan}{path}{white}')
