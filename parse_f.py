@@ -15,7 +15,7 @@ if(file_status):
     contents = []
     important = []
         # Opening the file  
-    with open(path) as f:
+    with open(path, "r", encoding="utf-8") as f:
         contents = f.readlines()
         for line in contents:
             if search_string in line:
