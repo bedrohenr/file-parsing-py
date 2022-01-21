@@ -5,10 +5,10 @@ yellow = '\033[93m'
 cyan =  '\033[96m'
 white = '\033[00m'
 
+# .strip(): removing whitespaces
 path = input('Insert path to file: ').strip()
 search_string = input('Insert text to search: ')
 
-# .strip(): removing whitespaces
 file_status = os.path.isfile(path)
 
 if(file_status):
