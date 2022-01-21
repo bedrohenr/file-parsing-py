@@ -5,9 +5,10 @@ yellow = '\033[93m'
 cyan =  '\033[96m'
 white = '\033[00m'
 
-path = input('Insert path to file: ')
+path = input('Insert path to file: ').strip()
 search_string = input('Insert text to search: ')
 
+# .strip(): removing whitespaces
 file_status = os.path.isfile(path)
 
 if(file_status):
@@ -55,4 +56,4 @@ if(file_status):
         print(cyan + 'Nothing to show from file.' + white)
 else:
     # Case wrong path is given or file doesnt exist
-    print(f'{yellow}File not found.\nCheck the inserted path: {cyan}{path}{white}')
+    print(f'{yellow}File not found.\nCheck the inserted path: {cyan}\'{path}\'{white}')
